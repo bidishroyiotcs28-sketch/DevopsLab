@@ -4,11 +4,7 @@ pipeline {
         IMAGE_NAME = "bidish5/devopslab"
     }
     stages {
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/bidishroyiotcs28-sketch/DevopsLab.git'
-            }
-        }
+        
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t $IMAGE_NAME .'
